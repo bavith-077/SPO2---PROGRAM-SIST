@@ -1,14 +1,23 @@
 //program to find largest element in a array;
-public class largest{
-    public static void main(String args[]){
-        int[] arr ={1,5,7,60,70,102};
+import java.util.Scanner;
+
+public class Largest {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the array size:");
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+        System.out.println("Enter the " + size + " numbers:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
         int max = arr[0];
-        for(int value : arr){
-            if(value > max){
+        for (int value : arr) {
+            if (value > max) {
                 max = value;
             }
-            System.out.println("largest element in array is :"+max);
         }
+        System.out.println("Largest element in the array is: " + max);
     }
 }
 /*output:
